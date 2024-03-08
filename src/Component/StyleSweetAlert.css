@@ -1,0 +1,46 @@
+.swal2-title{
+    color: var(--main_color) !important;
+    font-weight: 700 !important;
+    margin: 0px !important;
+    padding: 10px 20px !important;
+    padding-right: 0px  !important;
+}
+div:where(.swal2-container) .swal2-html-container{
+    margin: 0px 16px !important;
+    color: var(--main_color) !important;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+div:where(.swal2-container).swal2-center>.swal2-popup{
+    padding-top: 0px;
+}
+.swal2-actions{
+    width: 100%;
+    flex-direction: row-reverse
+}
+.swal2-popup{
+    width: 36em !important;
+}
+.swal2-popup .swal2-styled.swal2-confirm{
+    font-family: system-ui !important;
+    background-color: var(--main_color) !important;
+    padding: 10px 60px;
+    font-weight: 600;
+}
+.swal2-popup .swal2-styled.swal2-cancel{
+    padding: 10px 60px;
+    font-family: system-ui !important;
+    background-color: white !important;
+    border: 2px solid var(--main_color) !important;
+    color: var(--main_color) !important;
+}
+div:where(.swal2-container) .swal2-input#gender{
+    font-size: 20px !important;
+    direction: rtl;
+    border: 1px solid #cccccc;
+    
+    border-radius: 5px;
+}
+

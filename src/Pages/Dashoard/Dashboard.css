@@ -1,0 +1,62 @@
+.apDiv{
+    display: flex;
+    flex-direction: row-reverse;
+    font-family: 'Cairo', sans-serif;
+    background: var(--main3, #F8F8F8);
+}
+.apDiv.dashBoard #one{
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: "blur(5.5px)";
+    border: "1px solid rgba( 255, 255, 255, 0.18 )";
+}
+.titleDashBoard,.subTitle{
+    color: #101b14;
+}
+.numberUsers{
+    display: grid;
+    grid-template-columns: repeat( auto-fill , minmax(300px , 1fr));
+    gap: 20px;
+}
+.numberUsers .firstContent{
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+.numberUsers  .firstContent .numberTeacher{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    width: 345px;
+    padding: 10px;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.10);
+    border-radius: 8px;
+}
+.numberUsers .firstContent .numberTeacher p{
+    color: rgba(177, 177, 177, 0.69);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    margin: 0px;
+}
+.numberUsers .firstContent .numberTeacher h5{
+    color: #017457;
+    font-size: 32px;
+    font-style: normal;
+    margin: 0px;
+    margin-top: -15px;
+}
+.numberUsers ion-icon {
+    font-size: 40px;
+    color: #017457;
+
+}
+.fa-user-tie-hair:before{
+    font-size: 45px;
+    color: #017457;
+}
+@media (min-width: 98px) {
+    .numberUsers  .firstContent .numberTeacher{
+        width: 100%;
+    }
+}

@@ -1,0 +1,48 @@
+.apDiv.subscription #six{
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: "blur(5.5px)";
+    border: "1px solid rgba( 255, 255, 255, 0.18 )";
+}
+.subscription .contentSub{
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(300px , 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+.subscription  .numberTeacher{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    padding: 10px;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.10);
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+.subscription  .numberTeacher.one{
+    background-color: #A4856B
+}
+.subscription  .numberTeacher.two{
+    background-color: #D9AC6B
+}
+.subscription  .numberTeacher.three{
+    background-color: #C4C4C4
+}
+.subscription  .numberTeacher p{
+    color: rgba(255, 255, 255, 0.69);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    margin: 0px;
+}
+.subscription  .numberTeacher h5{
+    color: #017457;
+    font-size: 32px;
+    font-style: normal;
+    margin: 0px;
+    margin-top: -15px;
+}
+@media (max-width: 768px) {
+    
+}

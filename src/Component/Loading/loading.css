@@ -1,0 +1,23 @@
+.loading{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+    z-index: 9999999;
+    background-color: white;
+    height: 100vh;
+    position: fixed;
+}
+/* #919294 */
+/* .loading .contentLoading{
+    background-color: white;
+    border-radius: 10px !important;
+} */
+.css-1rn30mb-MuiCircularProgress-root{
+    width: 110px !important;
+    height: 110px !important;
+    padding: 50px 100px;
+}
+.loading .css-ol7wxs-MuiTypography-root{
+    font-size: 25px;
+}

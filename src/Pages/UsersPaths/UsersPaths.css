@@ -1,0 +1,11 @@
+.apDiv{
+    display: flex;
+    flex-direction: row-reverse;
+    font-family: 'Cairo', sans-serif;
+    background: var(--main3, #F8F8F8);
+}
+.apDiv.usersPaths #fourteenth{
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: "blur(5.5px)";
+    border: "1px solid rgba( 255, 255, 255, 0.18 )";
+}

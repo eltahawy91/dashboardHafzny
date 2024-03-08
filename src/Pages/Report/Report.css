@@ -1,0 +1,54 @@
+.apDiv.report #two{
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: "blur(5.5px)";
+    border: "1px solid rgba( 255, 255, 255, 0.18 )";
+}
+.contentReport {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr) );
+    gap: 20px;
+    margin-top: 70px;
+}
+.contentReport .block {
+    background-color: white;
+    padding: 0px 20px 20px 20px; 
+    position: relative;
+    margin-bottom: 30px;
+    border-radius: 16px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.10);
+}
+.contentReport .block h1{
+    position: absolute;
+    top: -50px;
+    background-color: #017457;
+    color: white;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.contentReport .block p{
+    color: #000;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: capitalize;
+    text-align: center;
+}
+.contentReport .block a{
+    border-radius: 8px;
+    background-color: #073E32;
+    text-align: center;
+    color: white;
+    padding: 5px;
+    display: block;
+    margin: auto;
+    transition: .3s;
+}
+.contentReport .block a:hover{
+    background-color: #017457;
+
+}

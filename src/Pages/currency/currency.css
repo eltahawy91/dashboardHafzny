@@ -1,0 +1,91 @@
+.admin .body_container .titleAdmin {
+  display: flex;
+  align-items: center;
+}
+.body_container > div button {
+  margin-right: 20px;
+  color: var(--main-2, #fff);
+  font-family: "Cairo", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  background-color: #073e32;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.body_container div button:hover {
+  background-color: #017457;
+  transform: scale(0.96);
+}
+.body_container div h1 {
+  color: #073e32;
+}
+.apDiv.admin #nine {
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: "blur(5.5px)";
+  border: "1px solid rgba( 255, 255, 255, 0.18 )";
+}
+select {
+  border: 0;
+  padding: 18px;
+  font-size: 18px;
+}
+
+input {
+  padding: 10px 12px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-right: 3px;
+  margin-bottom: 25px;
+  text-align: right;
+}
+select {
+  width: 50%;
+}
+
+.btn-Converter {
+  margin: 17px 0;
+}
+
+input:focus,
+input:active,
+input:focus-visible {
+  border: 1px solid #ccc;
+}
+
+select:focus-visible {
+  outline: none;
+}
+
+.addIcon {
+  background-color: var(--second_color);
+  color: white;
+  border-radius: 10px;
+  transition: 0.3s;
+  padding: 0px 15px;
+  width: 100%;
+  padding: 12px;
+  font-size: 22px;
+  cursor: pointer;
+  box-shadow: none;
+  border: 0;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.headBalance {
+  text-align: center;
+}
+
+.css-1acyv19 {
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+}

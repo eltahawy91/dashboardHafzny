@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/Dashboard/static/css/main.ab506693.css",
+    "main.js": "/Dashboard/static/js/main.df279bd1.js",
+    "static/media/fa-thin-100.ttf": "/Dashboard/static/media/fa-thin-100.54ac01ae3cde4955c094.ttf",
+    "static/media/fa-duotone-900.ttf": "/Dashboard/static/media/fa-duotone-900.3f45c5c197f52d283b4a.ttf",
+    "static/media/Rectangle2.png": "/Dashboard/static/media/Rectangle2.39ece9a37eb462700d0f.png",
+    "static/media/fa-light-300.ttf": "/Dashboard/static/media/fa-light-300.f477f634214f5869db27.ttf",
+    "static/media/error 404.gif": "/Dashboard/static/media/error 404.225b1b652fba8a16c261.gif",
+    "static/media/fa-regular-400.ttf": "/Dashboard/static/media/fa-regular-400.cde875017aa51a2e2533.ttf",
+    "static/media/fa-solid-900.ttf": "/Dashboard/static/media/fa-solid-900.42ce62dd5ccebc21cf2f.ttf",
+    "static/media/fa-thin-100.woff2": "/Dashboard/static/media/fa-thin-100.cc75bac992806cb353e2.woff2",
+    "static/media/fa-light-300.woff2": "/Dashboard/static/media/fa-light-300.6a94ba202cce157f94b7.woff2",
+    "static/media/fa-duotone-900.woff2": "/Dashboard/static/media/fa-duotone-900.ac0455b2ff12ba45e5e6.woff2",
+    "static/media/fa-regular-400.woff2": "/Dashboard/static/media/fa-regular-400.244128d7a5557df268b2.woff2",
+    "static/media/fa-solid-900.woff2": "/Dashboard/static/media/fa-solid-900.9f1626ec58494c3a070a.woff2",
+    "static/media/fa-brands-400.ttf": "/Dashboard/static/media/fa-brands-400.bb8a10b0705432f301de.ttf",
+    "static/media/Loader.gif": "/Dashboard/static/media/Loader.357ae8b68385c68da243.gif",
+    "static/media/noResultFounded.png": "/Dashboard/static/media/noResultFounded.553afd8c73c04c0378cc.png",
+    "static/media/fa-brands-400.woff2": "/Dashboard/static/media/fa-brands-400.5e7b19421dd30c3feeea.woff2",
+    "static/media/App Illustrations.jpg": "/Dashboard/static/media/App Illustrations.5f68cdd3ec6cdb0fd0c9.jpg",
+    "static/media/fa-v4compatibility.ttf": "/Dashboard/static/media/fa-v4compatibility.00e264f332e8dbdf60f5.ttf",
+    "static/media/fa-v4compatibility.woff2": "/Dashboard/static/media/fa-v4compatibility.ba24db420a3bf1f590cb.woff2",
+    "index.html": "/Dashboard/index.html",
+    "main.ab506693.css.map": "/Dashboard/static/css/main.ab506693.css.map",
+    "main.df279bd1.js.map": "/Dashboard/static/js/main.df279bd1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ab506693.css",
+    "static/js/main.df279bd1.js"
+  ]
+}

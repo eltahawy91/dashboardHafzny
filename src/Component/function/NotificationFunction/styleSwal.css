@@ -1,0 +1,158 @@
+.swal2-popup .swal2-actions .swal2-confirm {
+    background-color: var(--second_color) !important; 
+    color: #ffffff; 
+    width: 400px;
+    border: none; 
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-family: 'Cairo', sans-serif;
+}
+.custom-input {
+    direction: rtl;
+    margin-bottom: 10px;
+}
+div:where(.swal2-container) .swal2-input{
+    background-position: calc(100% - 10px) 12px;
+    background-repeat: no-repeat;
+    height: 50px ;
+    margin: 10px;
+    width: 400px;
+}
+/* div:where(.swal2-container) div:where(.swal2-actions){
+    display: grid !important;
+}    */
+div:where(.swal2-container) button:where(.swal2-styled).swal2-cancel{
+    font-family: 'Cairo', sans-serif;
+    background-color: var(--second_color) ;
+} 
+div:where(.swal2-container) button:where(.swal2-styled).swal2-cancel.custom-swal-cancel-butto{
+    background-color: rgba(255, 126, 61, 0.15) !important;
+    color: var(--second_color) !important;
+}
+div:where(.swal2-container) button:where(.swal2-styled).swal2-cancel.custom-swal-cancel-butto:hover{
+    background-color: var(--second_color) !important;
+    color: white !important;
+    opacity: 1;
+}
+.formDataOTP input{
+    padding-right: 0px !important;
+}
+.swal2-confirm{
+    cursor: pointer;
+    color:var(--second_color) ;
+}
+#login-button{
+    cursor: pointer;
+    color: var(--second_color) ;
+}
+@media (max-width: 980px) {
+    div:where(.swal2-container) .swal2-input{
+        width: 270px;
+    }
+}
+#create-account-link{
+    color:var(--second_color);
+}
+#forgot-password-link{
+    display: flex;
+    margin-left: 28px;
+    color:var(--second_color)
+    ;
+}
+div:where(.swal2-container) .swal2-html-container{
+    display: flex !important;
+    align-items: center;
+}
+div:where(.swal2-container) .swal2-html-container label{
+    display: contents;
+}
+div:where(.swal2-container) .swal2-html-container .server{
+    display: flex;
+    justify-content: 100%;
+    width: 60%;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+.part {
+    fill: #073E32;
+}
+input[type="radio" i] {
+    display: none;
+}
+.Swal{
+    margin: 10px;
+}
+.server , .AccountType {
+    border: 1px solid #eee;
+    border-radius: 12px;
+    position: relative;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.10);
+    padding: 10px 20px;
+    margin-bottom: 10px;
+}
+.AccountType{
+    padding: 20px 20px;
+}
+.server label , .AccountType label{
+    cursor: pointer;
+}
+.Swal input[type="radio"]:checked + .server {
+    background-color:var(--second_color) !important;
+    border: none;
+}
+.Swal input[type="radio"]:checked + .AccountType{
+    background-color:var(--second_color) !important;
+    border: none;
+}
+#option1:checked + .server .part,
+#option2:checked + .server .part,
+#option3:checked + .server .part{
+    fill: white; 
+}
+#option1:checked + .server ,
+#option2:checked + .server ,
+#option3:checked + .server {
+    color: white; 
+}
+label
+.formDataOTP{
+    display: flex;
+}
+div:where(.swal2-container) .formDataOTP .swal2-input {
+    width: 50px;
+    padding-right: 20px !important;
+    margin-right: 10px !important;
+}
+.swal2-popup .swal2-actions .swal2-confirm {
+    width: 300px;
+    margin: 0px 20px;
+}
+.delete-account-button-class {
+    background-color: #d33 !important; 
+}
+.swal2-title{
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.swal2-popup .swal2-title{
+    font-size: 20px !important;
+}
+.swal2-html-container #myForm{
+    display: flex !important;
+    flex-direction: column !important;
+}
+@media (max-width: 980px) {
+    div:where(.swal2-container) .swal2-html-container .server{
+        width: 50%;
+    }
+    .swal2-popup .swal2-actions .swal2-confirm {
+        width: 270px;
+    }
+    .server {
+        padding: 10px 30px;
+    }
+}
