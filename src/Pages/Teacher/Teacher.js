@@ -28,10 +28,28 @@ function Teacher() {
     }
   }, []);
 
+  const [dataTeacher, setDataTeacher] = useState({ teachers: [] });
+
   useEffect(() => {
     fetchDataWithRetries("teachers", setData, setStatus);
   }, []);
 
+  const activationFunc = async (id) => {
+    console.log("Parameter ID:", id);
+    try {
+      const response = await fetch(
+        `https://hafzny.online/back/public/api/teachers/${id}`
+      );
+      if (response.ok) {
+        const foundTeacher = await response.json();
+        console.log("Found Teacher Data:", foundTeacher);
+      } else {
+        console.log("Teacher with the specified ID not found.");
+      }
+    } catch (error) {
+      console.error("Error fetching teacher data:", error);
+    }
+  };
   const arrayColum = [
     { image: "الصوره" },
     { id: " المستخدم_id" },
@@ -68,9 +86,6 @@ function Teacher() {
     };
   }
 
-  const [activationTeacher, setActivationTeacher] = useState("");
-  const [isActive, setIsActive] = useState(false);
-  const [id, setId] = useState("");
   const rows =
     data && data.teachers
       ? data.teachers.map((item) =>
@@ -84,27 +99,12 @@ function Teacher() {
             [deleteImg, editImg],
             "عرض معلومات",
             <>
-              <Button onClick={() => activationFunction(item.id)}>
-                {isActive ? "تفعيل" : "تعطيل"}
-              </Button>
+              <Button onClick={() => activationFunc(item.id)}>تعطيل </Button>
             </>
           )
         )
       : [];
 
-  const activationFunction = async (id) => {
-    console.log(id);
-    const active = {
-      isActive: !isActive,
-    };
-    setIsActive(!isActive);
-    await postData(
-      `users/${id}/activation`,
-      active,
-      setActivationTeacher,
-      setStatus
-    );
-  };
   return (
     <div className="apDiv teacher">
       <Sidebar />

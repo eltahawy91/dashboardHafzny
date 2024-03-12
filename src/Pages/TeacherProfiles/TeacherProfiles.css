@@ -1,99 +1,103 @@
-.apDiv.teacherProfiles #eleventh{
-    background-color: rgba(255, 255, 255, 0.3);
-    backdrop-filter: "blur(5.5px)";
-    border: "1px solid rgba( 255, 255, 255, 0.18 )";
+.apDiv.teacherProfiles #eleventh {
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: "blur(5.5px)";
+  border: "1px solid rgba( 255, 255, 255, 0.18 )";
 }
 .CardProfile .sectionOne div span {
-    background: #2e7463;
+  background: #2e7463;
 }
 .CardProfile {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-    gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 20px;
 }
 
-.SkeletonRow .css-ahj2mt-MuiTypography-root{
-    line-height: 0px;
-    border-radius: 0.25rem;
+.SkeletonRow .css-ahj2mt-MuiTypography-root {
+  line-height: 0px;
+  border-radius: 0.25rem;
 }
 .CardProfile .sectionOne {
-    padding: 20px;
-    color: white;
-    border-radius: 8px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.10);
+  padding: 20px;
+  color: white;
+  border-radius: 8px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
 }
 
 .CardProfile .sectionOne {
-    background: linear-gradient(var(--second_color), var(--main_color)) !important;
+  background: linear-gradient(
+    var(--second_color),
+    var(--main_color)
+  ) !important;
 }
 .CardProfile .sectionOne p {
-    font-weight: 300;
-    text-align: center;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  font-weight: 300;
+  text-align: center;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.SkeletonRow  p{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 10px;
+.SkeletonRow p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
 }
 .CardProfile .sectionOne h2 {
-    text-align: center;
-    margin: 0px;
+  text-align: center;
+  margin: 0px;
 }
 .CardProfile .css-1c35hjw-MuiPaper-root-MuiAccordion-root.Mui-expanded,
-.css-1c35hjw-MuiPaper-root-MuiAccordion-root:first-of-type{
-    background-color: #2d7c69 !important;
-    color: white;
+.css-1c35hjw-MuiPaper-root-MuiAccordion-root:first-of-type,
+.MuiCollapse-wrapper.MuiCollapse-vertical.css-hboir5 {
+  background-color: #2d7c69 !important;
+  color: white !important;
 }
-.CardProfile .css-o4b71y-MuiAccordionSummary-content{
-    margin: 5px !important;
+.CardProfile .css-o4b71y-MuiAccordionSummary-content {
+  margin: 5px !important;
 }
-.CardProfile .css-sh22l5-MuiButtonBase-root-MuiAccordionSummary-root{
-    font-weight: normal;
-    color: white;
-    border: 1px solid #218d72;
-    background-color: #2d7c69 !important;
+.CardProfile .css-sh22l5-MuiButtonBase-root-MuiAccordionSummary-root {
+  font-weight: normal;
+  color: white;
+  border: 1px solid #218d72;
+  background-color: #2d7c69 !important;
 }
-.CardProfile .css-i4bv87-MuiSvgIcon-root{
-    color: white;
+.CardProfile .css-i4bv87-MuiSvgIcon-root {
+  color: white;
 }
 .CardProfile div .Edit {
-    display: flex;
+  display: flex;
 }
-.CardProfile .content{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.CardProfile .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.CardProfile .content .image{
-    padding: 0px 20px ;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
+.CardProfile .content .image {
+  padding: 0px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
 }
-.CardProfile .titleCard{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
+.CardProfile .titleCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
 }
 .CardProfile .titleCard ion-icon {
-    font-size: 35px;
-    cursor: pointer;
+  font-size: 35px;
+  cursor: pointer;
 }
-.CardProfile .content ion-icon{
-    cursor: pointer;
+.CardProfile .content ion-icon {
+  cursor: pointer;
 }
-.MuiButtonBase-root.MuiAccordionSummary-root.MuiAccordionSummary-gutters.css-1iji0d4{
-    border: 1px solid #218d72;
-    background-color: #2d7c69 !important;
+.MuiButtonBase-root.MuiAccordionSummary-root.MuiAccordionSummary-gutters.css-1iji0d4 {
+  border: 1px solid #218d72;
+  background-color: #2d7c69 !important;
 }
-.MuiTypography-root.MuiTypography-body1.css-9l3uo3{
-    font-family: 'Cairo', sans-serif;
+.MuiTypography-root.MuiTypography-body1.css-9l3uo3 {
+  font-family: "Cairo", sans-serif;
 }

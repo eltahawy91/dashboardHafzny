@@ -35,6 +35,7 @@ function TableComponent(props) {
   };
 
   const EditFunction = async (id) => {
+    console.log(props.path);
     if (props.path === "/Dashboard/mainPrivatePages") {
       navigate(`/Dashboard/privatePages/${id.id}`);
     } else if (props.path === "/Dashboard/Sessions") {
@@ -43,8 +44,7 @@ function TableComponent(props) {
       navigate(`/Dashboard/FormPackages/${id.id}`);
     } else if (props.path === "/Dashboard/alerts") {
       navigate(`/Dashboard/alerts/${id.id}`);
-    }
-    if (props.path === "/Dashboard/paymentAccount") {
+    } else if (props.path === "/Dashboard/paymentAccount") {
       navigate(`/Dashboard/paymentAccount/${id}`);
     } else if (props.path === "/Dashboard/currency") {
       navigate(`/Dashboard/currency/${id.id}`);
@@ -113,25 +113,23 @@ function TableComponent(props) {
   const [activationTeacher, setActivationTeacher] = useState("");
   const [status, setStatus] = useState("");
   const [isActive, setIsActive] = useState(false);
-  const activationFunction = async (id) => {
-    console.log(id);
-    const active = {
-      isActive: !isActive, // Toggle the value
-    };
 
-    // Assuming you have a state variable 'setIsActive' to update the 'isActive' state
-    setIsActive(!isActive);
+  // const activationFunction = async (id) => {
+  //   console.log(id);
+  //   const active = {
+  //     isActive: !isActive, // Toggle the value
+  //   };
 
-    // Assuming you have a function 'postData' to send a request to your API
-    await postData(
-      `users/${id}/activation`,
-      active,
-      setActivationTeacher,
-      setStatus
-    );
-  };
+  //   setIsActive(!isActive);
+  //   await postData(
+  //     `users/${id}/activation`,
+  //     active,
+  //     setActivationTeacher,
+  //     setStatus
+  //   );
+  // };
 
-  console.log(activationTeacher);
+  // console.log(activationTeacher);
   return (
     <div className="TableMessage">
       <Paper sx={{ width: "100%", overflow: "hidden" }}>

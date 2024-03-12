@@ -64,18 +64,22 @@ function TableProduct(props) {
                 <p>ترتيب الباقه</p>
                 <p className="number">{res.sort_order}</p>
               </div>
-              <div className="checkboxDiv">
-                <p
-                  className="Edit"
-                  onClick={() => navigate(`/Dashboard/FormPackages/${res.id}`)}
-                >
-                  تعديل :
-                  <img src={Edit} alt="" />
-                </p>
-                <p className="Edit" onClick={() => Delete(res.id)}>
-                  حذف :<ion-icon name="trash-outline"></ion-icon>
-                </p>
-              </div>
+              {res.name === "الباقة المجانية" ? null : (
+                <div className="checkboxDiv">
+                  <p
+                    className="Edit"
+                    onClick={() =>
+                      navigate(`/Dashboard/FormPackages/${res.id}`)
+                    }
+                  >
+                    تعديل :
+                    <img src={Edit} alt="" />
+                  </p>
+                  <p className="Edit" onClick={() => Delete(res.id)}>
+                    حذف :<ion-icon name="trash-outline"></ion-icon>
+                  </p>
+                </div>
+              )}
             </div>
           );
         })

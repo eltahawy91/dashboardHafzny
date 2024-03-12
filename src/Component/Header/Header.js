@@ -10,12 +10,29 @@ import "./Header.css";
 export default function Header(props) {
   const [isClearable] = useState(true);
   const [searchTerm, setSearchTerm] = useState("");
+  // const [filteredData, setFilteredData] = useState([]);
 
   const handleSearch = (event) => {
     setSearchTerm(event.target.value);
     props.onSearchChange && props.onSearchChange(event.target.value);
   };
+  // const [usersData, setUsersData] = useState([]);
+  // useEffect(() => {
+  //   fetch(`users`, setUsersData, setStatus)
+  // }, [])
+  // const data = Object.values(usersData);
 
+  // const handleSearch = (e) => {
+  //   const searchTerm = e.target.value;
+  //   console.log(searchTerm);
+  //   const filteredItems = data.map((innerArray) =>
+  //     innerArray.filter((item) =>
+  //       item.name.toLowerCase().includes(searchTerm.toLowerCase())
+  //     )
+  //   );
+  //   setFilteredData(filteredItems[0]);
+  // };
+  console.log(props.name);
   return (
     <div className="header">
       <h1>{props.title}</h1>

@@ -1,53 +1,55 @@
-.apDiv.student #four{
-    background-color: rgba(255, 255, 255, 0.3);
-    backdrop-filter: "blur(5.5px)";
-    border: "1px solid rgba( 255, 255, 255, 0.18 )";
+.apDiv.student #four {
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: "blur(5.5px)";
+  border: "1px solid rgba( 255, 255, 255, 0.18 )";
 }
-.student .body_container .StudentTable{
-    margin-top: 20px;
-}
-
-.student .body_container  .img img{
-    width: 70px;
-    height: 70px;
-}
-.student .body_container .firstContent{
-    margin-top: 30px;
-    margin-bottom: 30px;
+.student .body_container .StudentTable {
+  margin-top: 20px;
 }
 
-.student .body_container .firstContent .numberTeacher{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: white;
-    width: 300px;
-    padding: 10px;
-    box-sizing: border-box;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.10);
-    border-radius: 8px;
+.student .body_container .img img {
+  width: 70px;
+  height: 70px;
 }
-.student .body_container .firstContent .numberTeacher p{
-    color: rgba(177, 177, 177, 0.69);
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    margin: 0px;
+.student .body_container .firstContent {
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
-.student .body_container .firstContent .numberTeacher h5{
-    color: #017457;
-    font-size: 32px;
-    font-style: normal;
-    margin: 0px;
-    margin-top: -15px;
+
+.student .body_container .firstContent .numberTeacher {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  width: 300px;
+  padding: 10px;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 }
-.css-1ex1afd-MuiTableCell-root .image{
-    width: 60px;
-    height: 60px;
-    border-radius: 20px;
+.student .body_container .firstContent .numberTeacher p {
+  color: rgba(177, 177, 177, 0.69);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  margin: 0px;
 }
+.student .body_container .firstContent .numberTeacher h5 {
+  color: #017457;
+  font-size: 32px;
+  font-style: normal;
+  margin: 0px;
+  margin-top: -15px;
+}
+.css-1ex1afd-MuiTableCell-root .image,
+.MuiTableCell-root.MuiTableCell-body.MuiTableCell-sizeMedium.imageTeacher.css-q34dxg {
+  width: 60px !important;
+  height: 60px !important;
+  border-radius: 20px;
+}
+
 @media (max-width: 768px) {
-    .student .body_container .firstContent .numberTeacher{
-        width: 250px;
-    }
+  .student .body_container .firstContent .numberTeacher {
+    width: 250px;
+  }
 }

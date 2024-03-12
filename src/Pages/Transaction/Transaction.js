@@ -62,8 +62,11 @@ function Transaction() {
         <div className="body_container container" dir="rtl">
           <Header
             title="تحويلات المعلم"
+            // nameFunction={() =>
+            //   Users("users", 3, "/Dashboard/Transaction", setUploadPercentage)
+            // }
             nameFunction={() =>
-              Users("users", 3, "/Dashboard/Transaction", setUploadPercentage)
+              Users("users", 2, "/Dashboard/teacher", setUploadPercentage)
             }
             onSearchChange={setOnSearchChange}
           />

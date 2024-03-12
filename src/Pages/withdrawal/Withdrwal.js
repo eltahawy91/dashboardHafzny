@@ -62,8 +62,11 @@ function Withdrwal() {
         <div className="body_container container" dir="rtl">
           <Header
             title="طلبات السحب"
+            // nameFunction={() =>
+            //   Users("users", 3, "/Dashboard/Transaction", setUploadPercentage)
+            // }
             nameFunction={() =>
-              Users("users", 3, "/Dashboard/Transaction", setUploadPercentage)
+              Users("users", 3, "/Dashboard/Admins", setUploadPercentage)
             }
             onSearchChange={setOnSearchChange}
           />

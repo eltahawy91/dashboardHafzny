@@ -56,9 +56,9 @@ function PaymentAccount() {
         <div className="body_container container" dir="rtl">
           <Header
             title=" حسابات الدفع"
-            nameFunction={() =>
-              Users("users", 3, "/Dashboard/currency", setUploadPercentage)
-            }
+            // nameFunction={() =>
+            //   Users("users", 3, "/Dashboard/currency", setUploadPercentage)
+            // }
             onSearchChange={setOnSearchChange}
           />
           {uploadPercentage !== 0 && (

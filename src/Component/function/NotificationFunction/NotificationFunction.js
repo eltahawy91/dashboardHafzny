@@ -4,14 +4,14 @@ import { putData } from "../FunctionApi";
 import "./styleSwal.css";
 
 export const TypeSend = (url, PathPage, pathData) => {
-    Swal.fire({
-        title: " حدد الفئه المستهدفه  ",
-        showCloseButton: true,
-        allowOutsideClick: true,
-        customClass: {
-            popup: "server-custom",
-        },
-        html: `
+  Swal.fire({
+    title: " حدد الفئه المستهدفه  ",
+    showCloseButton: true,
+    allowOutsideClick: true,
+    customClass: {
+      popup: "server-custom",
+    },
+    html: `
             <div class="Swal">
                 <input type="radio" id="option1" name="choice" value="0">
                 <div class="server people mb-15 rad-10 w-full">
@@ -46,45 +46,45 @@ export const TypeSend = (url, PathPage, pathData) => {
             </div>
         </div>
         `,
-        confirmButtonText: "متابعه",
-    }).then((result) => {
-        if (result.isConfirmed) {
-            const selectedChoice = document.querySelector(
-                'input[name="choice"]:checked'
-            );
-            if (selectedChoice) {
-                const choiceValue = selectedChoice.value;
-                if( choiceValue === "0"){
-                    All_users(url, PathPage, pathData , false );
-                }else if(choiceValue === "1"){
-                    one_user(url, PathPage, pathData );
-                }else if(choiceValue === "2"){
-                    TypeCategory(url, PathPage, pathData );
-                }
-            } else {
-                Swal.fire({
-                    title: "يجب عليك اختيار إجابة!",
-                    icon: "warning",
-                    confirmButtonText: "متابعه",
-                }).then((result) => {
-                    if (result.isConfirmed) {
-                        TypeSend();
-                    }
-                });
-            }
+    confirmButtonText: "متابعه",
+  }).then((result) => {
+    if (result.isConfirmed) {
+      const selectedChoice = document.querySelector(
+        'input[name="choice"]:checked'
+      );
+      if (selectedChoice) {
+        const choiceValue = selectedChoice.value;
+        if (choiceValue === "0") {
+          All_users(url, PathPage, pathData, false);
+        } else if (choiceValue === "1") {
+          one_user(url, PathPage, pathData);
+        } else if (choiceValue === "2") {
+          TypeCategory(url, PathPage, pathData);
         }
-    });
+      } else {
+        Swal.fire({
+          title: "يجب عليك اختيار إجابة!",
+          icon: "warning",
+          confirmButtonText: "متابعه",
+        }).then((result) => {
+          if (result.isConfirmed) {
+            TypeSend();
+          }
+        });
+      }
+    }
+  });
 };
 
 export const TypeCategory = (url, PathPage, pathData) => {
-    Swal.fire({
-        title: " حدد الفئه المستخدمه  ",
-        showCloseButton: true,
-        allowOutsideClick: true,
-        customClass: {
-            popup: "server-custom",
-        },
-        html: `
+  Swal.fire({
+    title: " حدد الفئه المستخدمه  ",
+    showCloseButton: true,
+    allowOutsideClick: true,
+    customClass: {
+      popup: "server-custom",
+    },
+    html: `
             <div class="Swal">
                 <input type="radio" id="option1" name="choice" value="0">
                 <div class="server people mb-15 rad-10 w-full">
@@ -108,183 +108,186 @@ export const TypeCategory = (url, PathPage, pathData) => {
             </div>
         </div>
         `,
-        confirmButtonText: "متابعه",
-    }).then((result) => {
-        if (result.isConfirmed) {
-            const selectedChoice = document.querySelector(
-                'input[name="choice"]:checked'
-            );
-            if (selectedChoice) {
-                const choiceValueRole = selectedChoice.value;
-                All_users(url, PathPage, pathData , true , choiceValueRole)
-            } else {
-                Swal.fire({
-                    title: "يجب عليك اختيار إجابة!",
-                    icon: "warning",
-                    confirmButtonText: "متابعه",
-                }).then((result) => {
-                    if (result.isConfirmed) {
-                        TypeCategory();
-                    }
-                });
-            }
-        }
-    });
+    confirmButtonText: "متابعه",
+  }).then((result) => {
+    if (result.isConfirmed) {
+      const selectedChoice = document.querySelector(
+        'input[name="choice"]:checked'
+      );
+      if (selectedChoice) {
+        const choiceValueRole = selectedChoice.value;
+        All_users(url, PathPage, pathData, true, choiceValueRole);
+      } else {
+        Swal.fire({
+          title: "يجب عليك اختيار إجابة!",
+          icon: "warning",
+          confirmButtonText: "متابعه",
+        }).then((result) => {
+          if (result.isConfirmed) {
+            TypeCategory();
+          }
+        });
+      }
+    }
+  });
 };
 
+const All_users = (url, PathPage, pathData, is_role, choiceValueRole) => {
+  const data = (pathData && pathData) || "";
 
-const All_users = (url, PathPage, pathData , is_role , choiceValueRole) => {
-    const data = (pathData && pathData) || "";
-    
-    let DataSend = new FormData();
-    Swal.fire({
-        title: "اضافه",
-        showCloseButton: true,
-        allowOutsideClick: true,
-        html: `
+  let DataSend = new FormData();
+  Swal.fire({
+    title: "اضافه",
+    showCloseButton: true,
+    allowOutsideClick: true,
+    html: `
             <div>
                 <form id="myForm" class="custom-form">
-                    <input type="text" id="title" value="${data.title || ""
-                }" class="swal2-input title" autoComplete="off" placeholder="العنوان" style="direction: rtl; margin-bottom: 10px;" >
-                    <input type="text" id="message" value="${data.message || ""
-                }" class="swal2-input message" autoComplete="off" placeholder="المحتوي" style="direction: rtl; margin-bottom: 10px;">
+                    <input type="text" id="title" value="${
+                      data.title || ""
+                    }" class="swal2-input title" autoComplete="off" placeholder="العنوان" style="direction: rtl; margin-bottom: 10px;" >
+                    <input type="text" id="message" value="${
+                      data.message || ""
+                    }" class="swal2-input message" autoComplete="off" placeholder="المحتوي" style="direction: rtl; margin-bottom: 10px;">
                 </form>
             </div>
         `,
-        preConfirm: () => {
-            if (pathData) {
-                data.title !== document.getElementById("title").value &&
-                    DataSend.append("title", document.getElementById("title").value);
-                data.message !== document.getElementById("message").value &&
-                    DataSend.append("message", document.getElementById("message").value);
-            } else {
-                DataSend.append("title", document.getElementById("title").value);
-                DataSend.append("message", document.getElementById("message").value);
-                is_role === false ? DataSend.append("target_type", "all_users") : DataSend.append("target_type", "one_role")
-                is_role === true && DataSend.append("target_id", choiceValueRole) 
-            }
-            if (!pathData) {
-                if (
-                    !DataSend.get("title") ||
-                    !DataSend.get("message") 
-                ) {
-                    Swal.showValidationMessage("يرجى ملء جميع الحقول");
-                }
-            }
-        },
-        confirmButtonText: "متابعه",
-        confirmButtonClass: "custom-confirm-button",
-    }).then((result) => {
-        if (result.isConfirmed) {
-            const objectData = {};
-            DataSend.forEach((value, key) => {
-                objectData[key] = value;
-            });
-
-            const dataSend = objectData;
-
-            const requestFunction = pathData ? putData : postData;
-
-            requestFunction(url, dataSend)
-                .then((res) => {
-                    Swal.fire({
-                        icon: "success",
-                        title: "تم العمليه بنجاح",
-                        showConfirmButton: false,
-                        timer: 1500,
-                    }).then(() => {
-                        window.location.href = PathPage;
-                    });
-                })
-                .catch((err) => {
-                    Swal.fire({
-                        icon: "error",
-                        title: "خطأ في عملية ",
-                        showConfirmButton: false,
-                        timer: 1500,
-                    });
-                });
+    preConfirm: () => {
+      if (pathData) {
+        data.title !== document.getElementById("title").value &&
+          DataSend.append("title", document.getElementById("title").value);
+        data.message !== document.getElementById("message").value &&
+          DataSend.append("message", document.getElementById("message").value);
+      } else {
+        DataSend.append("title", document.getElementById("title").value);
+        DataSend.append("message", document.getElementById("message").value);
+        is_role === false
+          ? DataSend.append("target_type", "all_users")
+          : DataSend.append("target_type", "one_role");
+        is_role === true && DataSend.append("target_id", choiceValueRole);
+      }
+      if (!pathData) {
+        if (!DataSend.get("title") || !DataSend.get("message")) {
+          Swal.showValidationMessage("يرجى ملء جميع الحقول");
         }
-    });
+      }
+    },
+    confirmButtonText: "متابعه",
+    confirmButtonClass: "custom-confirm-button",
+  }).then((result) => {
+    if (result.isConfirmed) {
+      const objectData = {};
+      DataSend.forEach((value, key) => {
+        objectData[key] = value;
+      });
+
+      const dataSend = objectData;
+
+      const requestFunction = pathData ? putData : postData;
+
+      requestFunction(url, dataSend)
+        .then((res) => {
+          Swal.fire({
+            icon: "success",
+            title: "تم العمليه بنجاح",
+            showConfirmButton: false,
+            timer: 1500,
+          }).then(() => {
+            window.location.href = PathPage;
+          });
+        })
+        .catch((err) => {
+          Swal.fire({
+            icon: "error",
+            title: "خطأ في عملية ",
+            showConfirmButton: false,
+            timer: 1500,
+          });
+        });
+    }
+  });
 };
 
 const one_user = (url, PathPage, pathData) => {
-    const data = (pathData && pathData) || "";
-    let DataSend = new FormData();
+  const data = (pathData && pathData) || "";
+  let DataSend = new FormData();
 
-    Swal.fire({
-        title: "اضافه",
-        showCloseButton: true,
-        allowOutsideClick: true,
-        html: `
+  Swal.fire({
+    title: "اضافه",
+    showCloseButton: true,
+    allowOutsideClick: true,
+    html: `
             <div>
                 <form id="myForm" class="custom-form">
-                    <input type="text" id="title" value="${data.title || ""
-                }" class="swal2-input title" autoComplete="off" placeholder="العنوان" style="direction: rtl; margin-bottom: 10px;" >
-                    <input type="text" id="message" value="${data.message || ""
-                }" class="swal2-input message" autoComplete="off" placeholder="المحتوي" style="direction: rtl; margin-bottom: 10px;">
-                <input type="number" id="target_id" value="${data.target_id|| ""
+                    <input type="text" id="title" value="${
+                      data.title || ""
+                    }" class="swal2-input title" autoComplete="off" placeholder="العنوان" style="direction: rtl; margin-bottom: 10px;" >
+                    <input type="text" id="message" value="${
+                      data.message || ""
+                    }" class="swal2-input message" autoComplete="off" placeholder="المحتوي" style="direction: rtl; margin-bottom: 10px;">
+                <input type="number" id="target_id" value="${
+                  data.target_id || ""
                 }" class="swal2-input target_id" autoComplete="off" placeholder="id user" style="direction: rtl; margin-bottom: 10px;">
                 </form>
             </div>
         `,
-        preConfirm: () => {
+    preConfirm: () => {
+      if (pathData) {
+        data.title !== document.getElementById("title").value &&
+          DataSend.append("title", document.getElementById("title").value);
+        data.message !== document.getElementById("message").value &&
+          DataSend.append("message", document.getElementById("message").value);
+      } else {
+        DataSend.append("title", document.getElementById("title").value);
+        DataSend.append("message", document.getElementById("message").value);
+        DataSend.append(
+          "target_id",
+          document.getElementById("target_id").value
+        );
+        DataSend.append("target_type", "one_role");
+      }
 
-            if (pathData) {
-                data.title !== document.getElementById("title").value &&
-                    DataSend.append("title", document.getElementById("title").value);
-                data.message !== document.getElementById("message").value &&
-                    DataSend.append("message", document.getElementById("message").value);
-
-            } else {
-                DataSend.append("title", document.getElementById("title").value);
-                DataSend.append("message", document.getElementById("message").value);
-                DataSend.append("target_id", document.getElementById("target_id").value);
-                DataSend.append("target_type", "one_role");
-            }
-
-            if (!pathData) {
-                if (
-                    !DataSend.get("title") ||
-                    !DataSend.get("message") ||
-                    !DataSend.get("target_id") 
-
-                ) {
-                    Swal.showValidationMessage("يرجى ملء جميع الحقول");
-                }
-            }
-        },
-
-        confirmButtonText: "متابعه",
-        confirmButtonClass: "custom-confirm-button",
-    }).then((result) => {
-        if (result.isConfirmed) {
-            const objectData = {};
-            DataSend.forEach((value, key) => {
-                objectData[key] = value;
-            });
-
-            const dataSend = objectData;
-            const requestFunction = pathData ? putData : postData;
-            requestFunction(url, dataSend)
-                .then((res) => {
-                    Swal.fire({
-                        icon: "success",
-                        title: "تم العمليه بنجاح",
-                        showConfirmButton: false,
-                        timer: 1500,
-                    }).then(() => {
-                        window.location.href = PathPage;
-                    });
-                })
-                .catch((err) => {
-                    Swal.fire({
-                        icon: "error",
-                        title: "خطأ في عملية ",
-                        showConfirmButton: false,
-                        timer: 1500,
-                    });
-                });
+      if (!pathData) {
+        if (
+          !DataSend.get("title") ||
+          !DataSend.get("message") ||
+          !DataSend.get("target_id")
+        ) {
+          Swal.showValidationMessage("يرجى ملء جميع الحقول");
         }
-    });
+      }
+    },
+
+    confirmButtonText: "متابعه",
+    confirmButtonClass: "custom-confirm-button",
+  }).then((result) => {
+    if (result.isConfirmed) {
+      const objectData = {};
+      DataSend.forEach((value, key) => {
+        objectData[key] = value;
+      });
+
+      const dataSend = objectData;
+      const requestFunction = pathData ? putData : postData;
+      requestFunction(url, dataSend)
+        .then((res) => {
+          Swal.fire({
+            icon: "success",
+            title: "تم العمليه بنجاح",
+            showConfirmButton: false,
+            timer: 1500,
+          }).then(() => {
+            window.location.href = PathPage;
+          });
+        })
+        .catch((err) => {
+          Swal.fire({
+            icon: "error",
+            title: "خطأ في عملية ",
+            showConfirmButton: false,
+            timer: 1500,
+          });
+        });
+    }
+  });
 };
