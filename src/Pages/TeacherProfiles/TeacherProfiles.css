@@ -94,9 +94,20 @@
 .CardProfile .content ion-icon {
   cursor: pointer;
 }
+.MuiAccordionSummary-expandIconWrapper.MuiAccordionSummary-expandIconWrapper.css-1fx8m19 {
+  color: white !important;
+}
 .MuiButtonBase-root.MuiAccordionSummary-root.MuiAccordionSummary-gutters.css-1iji0d4 {
+  color: white !important;
+}
+.MuiAccordionSummary-expandIconWrapper.css-1fx8m19 {
+  color: white !important;
+}
+.MuiButtonBase-root.MuiAccordionSummary-root.MuiAccordionSummary-gutters.css-1iji0d4,
+.MuiButtonBase-root.MuiAccordionSummary-root.Mui-expanded.MuiAccordionSummary-gutters.css-1iji0d4 {
   border: 1px solid #218d72;
   background-color: #2d7c69 !important;
+  color: white !important;
 }
 .MuiTypography-root.MuiTypography-body1.css-9l3uo3 {
   font-family: "Cairo", sans-serif;

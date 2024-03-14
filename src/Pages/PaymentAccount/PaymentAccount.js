@@ -55,7 +55,7 @@ function PaymentAccount() {
         <Sidebar />
         <div className="body_container container" dir="rtl">
           <Header
-            title=" حسابات الدفع"
+            title="حسابات الدفع"
             // nameFunction={() =>
             //   Users("users", 3, "/Dashboard/currency", setUploadPercentage)
             // }

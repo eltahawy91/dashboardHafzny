@@ -14,6 +14,7 @@ import NoDataImage from "../../Component/img/App Illustrations.jpg";
 
 import "./Teacher.css";
 import { Button } from "react-bootstrap";
+import { set } from "date-fns";
 
 function Teacher() {
   const [data, setData] = useState("");
@@ -30,24 +31,20 @@ function Teacher() {
 
   const [dataTeacher, setDataTeacher] = useState({ teachers: [] });
 
+  const [error, setError] = useState("");
   useEffect(() => {
     fetchDataWithRetries("teachers", setData, setStatus);
   }, []);
-
-  const activationFunc = async (id) => {
-    console.log("Parameter ID:", id);
+  const activationFunc = async (id, statusAccount) => {
     try {
-      const response = await fetch(
-        `https://hafzny.online/back/public/api/teachers/${id}`
-      );
-      if (response.ok) {
-        const foundTeacher = await response.json();
-        console.log("Found Teacher Data:", foundTeacher);
-      } else {
-        console.log("Teacher with the specified ID not found.");
-      }
+      console.log(statusAccount);
+      await postData(`users/${id}/activation`, { isActive: statusAccount });
+      window.location.reload();
+      
+      setError(null);
     } catch (error) {
-      console.error("Error fetching teacher data:", error);
+      console.error("Error:", error);
+      setError(error.message);
     }
   };
   const arrayColum = [
@@ -59,7 +56,7 @@ function Teacher() {
     { moreInfo: "عرض معلومات" },
     { gender: "النوع" },
     { action: "عمليات" },
-    { activation: "تفعيل" },
+    { activation: "التوثيق" },
   ];
 
   function createData(
@@ -99,7 +96,13 @@ function Teacher() {
             [deleteImg, editImg],
             "عرض معلومات",
             <>
-              <Button onClick={() => activationFunc(item.id)}>تعطيل </Button>
+              <Button
+                onClick={async () => {
+                  await activationFunc(item.id, item.isActive ? false : true);
+                }}
+              >
+                {item.isActive ? "تعطيل" : "تفعيل"}
+              </Button>
             </>
           )
         )

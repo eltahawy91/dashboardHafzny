@@ -25,7 +25,7 @@ function CardUsersPaths() {
     const DeletePaths = async (id) => {
         DeleteAdmins(
             `paths/${id}`,
-            `/usersPaths`,
+            `usersPaths`,
             "حذف هذا المسار",
             "هل انت متاكد انك تريد الحذف"
         );

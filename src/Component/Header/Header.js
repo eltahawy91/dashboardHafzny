@@ -36,24 +36,30 @@ export default function Header(props) {
   return (
     <div className="header">
       <h1>{props.title}</h1>
-      <TextField
-        label="البحث"
-        variant="outlined"
-        onChange={handleSearch}
-        value={searchTerm}
-        style={{ margin: "5px 0", textAlign: "right" }}
-      />
+      {props.title === "لوحة التحكم" ? null : (
+        <TextField
+          label="البحث"
+          variant="outlined"
+          onChange={handleSearch}
+          value={searchTerm}
+          style={{ margin: "5px 0", textAlign: "right" }}
+        />
+      )}
+
       <div className="userDiv">
-        {props.isHide !== "true" && (
-          <button onClick={props.nameFunction} className="addIcon">
-            {" "}
-            اضافه{" "}
-            <span>
-              {" "}
-              <AddIcon />{" "}
-            </span>
-          </button>
+        {props.title === "بروفايل المعلم" || props.title === "حسابات الدفع" ? null : (
+          <>
+            {props.isHide !== "true" && (
+              <button onClick={props.nameFunction} className="addIcon">
+                اضافة{" "}
+                <span>
+                  <AddIcon />
+                </span>
+              </button>
+            )}
+          </>
         )}
+        
         <img
           src={
             localStorage.getItem("imageUser") === "null"

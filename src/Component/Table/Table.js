@@ -15,6 +15,8 @@ import Button from "@mui/material/Button";
 import StarBorderPurple500Icon from "@mui/icons-material/StarBorderPurple500";
 import { Link, useNavigate } from "react-router-dom";
 import "./Table.css";
+import { VscWorkspaceTrusted } from "react-icons/vsc";
+
 import img from "../img/team-01.png";
 import { fetchDataWithRetries, postData } from "../function/FunctionApi";
 
@@ -112,24 +114,12 @@ function TableComponent(props) {
 
   const [activationTeacher, setActivationTeacher] = useState("");
   const [status, setStatus] = useState("");
-  const [isActive, setIsActive] = useState(false);
+  useEffect(() => {
+    if (props.path === "/Dashboard/teacher") {
+      fetchDataWithRetries(`teachers`, setActivationTeacher, setStatus);
+    }
+  }, []);
 
-  // const activationFunction = async (id) => {
-  //   console.log(id);
-  //   const active = {
-  //     isActive: !isActive, // Toggle the value
-  //   };
-
-  //   setIsActive(!isActive);
-  //   await postData(
-  //     `users/${id}/activation`,
-  //     active,
-  //     setActivationTeacher,
-  //     setStatus
-  //   );
-  // };
-
-  // console.log(activationTeacher);
   return (
     <div className="TableMessage">
       <Paper sx={{ width: "100%", overflow: "hidden" }}>
@@ -223,20 +213,52 @@ function TableComponent(props) {
                           } else if (column.id === "image") {
                             return (
                               <TableCell
+                                style={{ display: "flex" }}
                                 className="imageTeacher"
                                 key={column.id}
                                 align={column.align}
                               >
-                                <img
-                                  className="image "
-                                  src={value || img}
-                                  alt=""
-                                />
-                                {isActive === true ? (
-                                  <span className="untrusted"></span>
-                                ) : (
-                                  <span className="trusted"></span>
-                                )}
+                                <div style={{ display: "flex" }}>
+                                  <img
+                                    className="image "
+                                    src={value || img}
+                                    alt=""
+                                  />
+
+                                  {props.path === "/Dashboard/teacher" ? (
+                                    <>
+                                      {activationTeacher.teachers.map((item) =>
+                                        item.id === row.id ? (
+                                          <>
+                                            <p className="activation">
+                                              {item.isOnline === 1 ? (
+                                                <span className="trusted"></span>
+                                              ) : (
+                                                <span className="untrusted"></span>
+                                              )}
+                                            </p>
+                                            <p className="activation">
+                                              {item.isActive === 1 ? (
+                                                <h4
+                                                  style={{
+                                                    backgroundColor: "#68b7ff",
+                                                    color: "white",
+                                                    borderRadius: "4px",
+                                                    padding: "4px 8px",
+                                                  }}
+                                                >
+                                                  <VscWorkspaceTrusted
+                                                    fontSize={20}
+                                                  />
+                                                </h4>
+                                              ) : null}
+                                            </p>
+                                          </>
+                                        ) : null
+                                      )}
+                                    </>
+                                  ) : null}
+                                </div>
                               </TableCell>
                             );
                           } else if (column.id === "gender") {

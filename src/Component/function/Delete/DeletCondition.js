@@ -50,16 +50,14 @@ export const Delete = async (id, path) => {
       "حذف الاشعار",
       "هل انت متاكد انك تريد حذف هذا الاشعار"
     );
-  }
-  if (path === "/Dashboard/paymentAccount") {
+  } else if (path === "/Dashboard/paymentAccount") {
     DeleteAdmins(
       `payment-accounts/${id}`,
       `${path}`,
       "حذف الحساب",
       "هل انت متاكد انك تريد حذف هذا الحساب"
     );
-  }
-  if (path === "/Dashboard/mainPrivatePages") {
+  } else if (path === "/Dashboard/mainPrivatePages") {
     DeleteAdmins(
       `pages/${id}`,
       `${path}`,
